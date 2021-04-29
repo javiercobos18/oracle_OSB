@@ -1,0 +1,49 @@
+<wsdl:definitions targetNamespace="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/definitions" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/definitions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd1="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/schemas">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/definitions">
+      <xsd:import namespace="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/schemas" schemaLocation="../schemas/CatalogInsurancePolicyManager.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getCustomerIdTypeListInMsg">
+    <wsdl:part element="xsd1:getCustomerIdTypeListRq" name="Request"/>
+  </wsdl:message>
+  <wsdl:message name="getCustomerIdTypeListOutMsg">
+    <wsdl:part element="xsd1:getCustomerIdTypeListRs" name="Response"/>
+  </wsdl:message>
+  <wsdl:message name="getCountryListInMsg">
+    <wsdl:part element="xsd1:getCountryListRq" name="Request"/>
+  </wsdl:message>
+  <wsdl:message name="getCountryListOutMsg">
+    <wsdl:part element="xsd1:getCountryListRs" name="Response"/>
+  </wsdl:message>
+    <wsdl:message name="getIndutListInMsg">
+    <wsdl:part element="xsd1:getIndutListRq" name="Request"/>
+  </wsdl:message>
+  <wsdl:message name="getIndutListMsg">
+    <wsdl:part element="xsd1:getIndutListRs" name="Response"/>
+  </wsdl:message>
+    <wsdl:message name="getRelationshipListInMsg">
+    <wsdl:part element="xsd1:getRelationshipListRq" name="Request"/>
+  </wsdl:message>
+  <wsdl:message name="getRelationshipListOutMsg">
+    <wsdl:part element="xsd1:getRelationshipListRs" name="Response"/>
+  </wsdl:message>
+  <wsdl:portType name="catalogInsurancePolicyManagerPortType">
+    <wsdl:operation name="getCustomerIdTypeList">
+      <wsdl:input message="tns:getCustomerIdTypeListInMsg"/>
+      <wsdl:output message="tns:getCustomerIdTypeListOutMsg"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryList">
+      <wsdl:input message="tns:getCountryListInMsg"/>
+      <wsdl:output message="tns:getCountryListOutMsg"/>
+    </wsdl:operation>
+	 <wsdl:operation name="getIndutList">
+      <wsdl:input message="tns:getIndutListInMsg"/>
+      <wsdl:output message="tns:getIndutListMsg"/>
+    </wsdl:operation>
+	 <wsdl:operation name="getRelationshipList">
+      <wsdl:input message="tns:getRelationshipListInMsg"/>
+      <wsdl:output message="tns:getRelationshipListOutMsg"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

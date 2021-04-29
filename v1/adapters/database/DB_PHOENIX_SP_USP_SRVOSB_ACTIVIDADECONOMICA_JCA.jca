@@ -1,0 +1,14 @@
+<adapter-config name="DB_PHOENIX_SP_USP_SRVOSB_ACTIVIDADECONOMICA" adapter="db" wsdlLocation="../../interfaces/wsdl/DB_PHOENIX_SP_USP_SRVOSB_ACTIVIDADECONOMICA.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="Phoenix" location="eis/DB/bank/OSB-trxjc_phoenix_dbad" UIProcedureReturnStatus="true" UIStrongXSD="true"/>
+  <endpoint-interaction portType="DB_PHOENIX_SP_USP_SRVOSB_ACTIVIDADECONOMICA_ptt" operation="DB_PHOENIX_SP_USP_SRVOSB_ACTIVIDADECONOMICA">
+    <interaction-spec className="oracle.tip.adapter.db.DBStoredProcedureInteractionSpec">
+      <property name="SchemaName" value="phoenix"/>
+      <property name="PackageName" value="dbo"/>
+      <property name="ProcedureName" value="USP_SRVOSB_ActividadEconomica"/>
+      <property name="QueryTimeout" value="6"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

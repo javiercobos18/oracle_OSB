@@ -1,0 +1,15 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceBusApplication/support/DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR" name="DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceBusApplication/support/DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR"/>
+    <wsdl:binding name="DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR_ptt-binding" type="db:DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR_ptt" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceBusApplication/support/DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR">
+            <soap:operation soapAction="DB_PHOENIX_SP_USP_SRVOSB_PAISDEPTOCIUDADBAR"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

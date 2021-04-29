@@ -1,0 +1,47 @@
+<wsdl:definitions name="CatalogInsurancePolicyManager_soap" targetNamespace="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/definitions" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/definitions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="CatalogInsurancePolicyManager.wsdl" namespace="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/definitions"/>
+  <wsdl:binding name="catalogInsurancePolicyManagerBinding" type="tns:catalogInsurancePolicyManagerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCustomerIdTypeList">
+      <soap:operation soapAction="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/operations/getcustomeridtypelist"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryList">
+      <soap:operation soapAction="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/operations/getcountrylist"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+	<wsdl:operation name="getIndutList">
+      <soap:operation soapAction="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/operations/getindutlist"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRelationshipList">
+      <soap:operation soapAction="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/operations/getrelationshiplist"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="catalogInsurancePolicyManagerService">
+    <wsdl:port binding="tns:catalogInsurancePolicyManagerBinding" name="catalogInsurancePolicyManagerPort">
+      <soap:address location="http://localhost:7800/services/support/cataloginsurancepolicymanager/v1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

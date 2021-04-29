@@ -1,0 +1,6 @@
+<view_states>
+   <function arity="2" name="getRelationshipListRs">
+      <source_tree_view last.visible.row="3" last.visible.path="/sourceRoot[[0]]/int[[3]]" first.visible.path="/sourceRoot[[0]]/getRelationshipListRq[[0]]" expanded.paths="" first.visible.row="0" selected.paths=""/>
+      <target_tree_view last.visible.row="0" last.visible.path="/TargetRoot[[0]]/getRelationshipListRs[[0]]" first.visible.path="/TargetRoot[[0]]/getRelationshipListRs[[0]]" expanded.paths="" first.visible.row="0" selected.paths=""/>
+   </function>
+</view_states>

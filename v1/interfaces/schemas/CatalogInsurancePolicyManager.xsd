@@ -1,0 +1,132 @@
+<xsd:schema targetNamespace="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/schemas" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cat="http://itau.com.co/services/support/cataloginsurancepolicymanager/v1/schemas" xmlns:cmm2="http://itau.com.co/commoncannonical/v2/schemas">
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/HeaderRequest_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/HeaderResponse_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/CustIdType_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/Desc_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/SeqNum_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/MaxRec_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/Country_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/CountryName_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/StateProvCode_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/StateProv_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/CityId_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/City_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/MaxRec_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/CountyDistrict_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/CountryDistrictCode_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/Count_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/IndustNum_Type.xsd"/>
+  <xsd:import namespace="http://itau.com.co/commoncannonical/v2/schemas" schemaLocation="../../../../CommonCanonical/v2/interfaces/schemas/types/RelationshipId_Type.xsd"/>
+  <xsd:element name="getCustomerIdTypeListRq" type="cat:getCustomerIdTypeListRq_Type"/>
+  <xsd:complexType name="getCustomerIdTypeListRq_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderRequest" type="cmm2:HeaderRequest_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getCustomerIdTypeListRs" type="cat:getCustomerIdTypeListRs_Type"/>
+  <xsd:complexType name="getCustomerIdTypeListRs_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderResponse" type="cmm2:HeaderResponse_Type"/>
+      <xsd:element name="CustomerIdTypeList" type="cat:CustomerIdTypeList_Type" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getCountryListRq" type="cat:getCountryListRq_Type"/>
+  <xsd:complexType name="getCountryListRq_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderRequest" type="cmm2:HeaderRequest_Type"/>
+	  <xsd:element name="seqNum" type="cmm2:SeqNum_Type"/>
+	  <xsd:element name="maxRec" type="cmm2:MaxRec_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getCountryListRs" type="cat:getCountryListRs_Type"/>
+  <xsd:complexType name="getCountryListRs_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderResponse" type="cmm2:HeaderResponse_Type"/>
+	  <xsd:element name="ContactList" type="cat:ContactList_Type" minOccurs="0"/>
+	  <xsd:element name="count" type="cmm2:NC"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getIndutListRq" type="cat:getIndutListRq_Type"/>
+  <xsd:complexType name="getIndutListRq_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderRequest" type="cmm2:HeaderRequest_Type"/>
+	  <xsd:element name="seqNum" type="cmm2:SeqNum_Type"/>
+	  <xsd:element name="maxRec" type="cmm2:MaxRec_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getIndutListRs" type="cat:getIndutListRs_Type"/>
+  <xsd:complexType name="getIndutListRs_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderResponse" type="cmm2:HeaderResponse_Type"/>
+	  <xsd:element name="IndutList" type="cat:IndutList_Type" minOccurs="0"/>
+	  <xsd:element name="count" type="cmm2:NC"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getRelationshipListRq" type="cat:getRelationshipListRq_Type"/>
+  <xsd:complexType name="getRelationshipListRq_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderRequest" type="cmm2:HeaderRequest_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getRelationshipListRs" type="cat:getRelationshipListRs_Type"/>
+  <xsd:complexType name="getRelationshipListRs_Type">
+    <xsd:sequence>
+      <xsd:element name="HeaderResponse" type="cmm2:HeaderResponse_Type"/>
+      <xsd:element name="RelationshipList" type="cat:RelationshipList_Type" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="CustomerIdTypeList_Type">
+  <xsd:sequence>
+      <xsd:element name="CustomerIdTypeInfo" type="cat:CustomerIdTypeInfo_Type" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+  <xsd:complexType name="CustomerIdTypeInfo_Type">
+  <xsd:sequence>
+   <xsd:element name="custIdType" type="cmm2:CustIdType_Type" minOccurs="0"/>
+   <xsd:element name="desc" type="cmm2:Desc_Type" minOccurs="0"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+  <xsd:complexType name="ContactList_Type">
+  <xsd:sequence>
+      <xsd:element name="ContactInfo" type="cat:ContactInfo_Type" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+  <xsd:complexType name="ContactInfo_Type">
+  <xsd:sequence>
+   <xsd:element name="country" type="cmm2:Country" minOccurs="0"/>
+   <xsd:element name="countryName" type="cmm2:CountryName_Type" minOccurs="0"/>
+   <xsd:element name="stateProvCode" type="cmm2:StateProvCode_Type" minOccurs="0"/>
+   <xsd:element name="stateProv" type="cmm2:StateProv_Type" minOccurs="0"/>
+   <xsd:element name="cityId" type="cmm2:CityId_Type" minOccurs="0"/>
+   <xsd:element name="city" type="cmm2:City_Type" minOccurs="0"/>
+   <xsd:element name="countryDistrictCode" type="cmm2:CountryDistrictCode_Type" minOccurs="0"/>
+   <xsd:element name="countryDistrict" type="cmm2:C" minOccurs="0"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+  
+  <xsd:complexType name="IndutList_Type">
+  <xsd:sequence>
+      <xsd:element name="IndutInfo" type="cat:IndutInfo_Type" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+  <xsd:complexType name="IndutInfo_Type">
+  <xsd:sequence>
+   <xsd:element name="industNum" type="cmm2:IndustNum_Type" minOccurs="0"/>
+   <xsd:element name="desc" type="cmm2:Desc_Type" minOccurs="0"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+  
+    
+  <xsd:complexType name="RelationshipList_Type">
+  <xsd:sequence>
+      <xsd:element name="RelationshipInfo" type="cat:RelationshipInfo_Type" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+  <xsd:complexType name="RelationshipInfo_Type">
+  <xsd:sequence>
+   <xsd:element name="relationshipId" type="cmm2:RelationshipId_Type" minOccurs="0"/>
+   <xsd:element name="desc" type="cmm2:Desc_Type" minOccurs="0"/>
+  </xsd:sequence>    
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,15 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceBusApplication/support/DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO" name="DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceBusApplication/support/DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO"/>
+    <wsdl:binding name="DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO_ptt-binding" type="db:DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO_ptt" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceBusApplication/support/DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO">
+            <soap:operation soapAction="DB_PHOENIX_SP_USP_SRVOSB_PARENTESCO"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>
